@@ -14,5 +14,6 @@ jobs:
       - name: Azure PowerShell Action
         uses: Azure/powershell@v1
         with:
+          Install-Module -Name Az -AllowClobber -Scope CurrentUser
           inlineScript: Get-AzureVM -ResourceGroupName "githubtest"
           azPSVersion: 3.1.0
